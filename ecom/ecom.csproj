@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data/Contexts/" />
     <Folder Include="Data/Databases/" />
   </ItemGroup>
 

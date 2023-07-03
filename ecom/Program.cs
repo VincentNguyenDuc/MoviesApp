@@ -7,8 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Database configuration
-string connectionString = builder.Configuration.GetConnectionString("SQLiteContext");
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString));
+builder.Services.AddDbContext<AppDbContext>(options => options
+        .UseSqlite(builder
+        .Configuration
+        .GetConnectionString("SQLiteContext")));
 
 var app = builder.Build();
 
@@ -26,6 +28,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.CreateDbIfNotExists();
 
 app.MapControllerRoute(
     name: "default",
