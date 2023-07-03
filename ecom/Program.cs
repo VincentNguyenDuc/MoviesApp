@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Database configuration
-builder.Services.AddSqlServer<AppDbContext>("Data Source=EcomAppDB.db");
+string connectionString = builder.Configuration.GetConnectionString("SQLiteContext");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString));
 
 var app = builder.Build();
 
