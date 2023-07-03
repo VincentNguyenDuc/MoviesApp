@@ -1,7 +1,13 @@
+using ecom.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Database configuration
+builder.Services.AddSqlServer<AppDbContext>("Data Source=EcomAppDB.db");
 
 var app = builder.Build();
 
