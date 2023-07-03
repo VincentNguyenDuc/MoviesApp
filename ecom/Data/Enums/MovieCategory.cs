@@ -1,4 +1,4 @@
-﻿namespace ecom.Data.Enum;
+﻿namespace ecom.Data.Enums;
 
 public enum MovieCategory
 {

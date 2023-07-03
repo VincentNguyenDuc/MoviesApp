@@ -1,17 +1,17 @@
-using ecom.Data.Enum;
+using ecom.Data.Enums;
 using ecom.Models;
 
-namespace ecom.Data
-{
-    public class AppDbInitializer
-    {
-        public static void Initialize(AppDbContext context)
-        {
+namespace ecom.Data;
 
-            //Cinema
-            if (!context.Cinemas.Any())
-            {
-                context.Cinemas.AddRange(new List<Cinema>()
+public class AppDbInitializer
+{
+    public static void Initialize(AppDbContext context)
+    {
+
+        //Cinema
+        if (!context.Cinemas.Any())
+        {
+            context.Cinemas.AddRange(new List<Cinema>()
                     {
                         new Cinema()
                         {
@@ -44,12 +44,12 @@ namespace ecom.Data
                             Description = "This is the description of the first cinema"
                         },
                     });
-                context.SaveChanges();
-            }
-            //Actors
-            if (!context.Actors.Any())
-            {
-                context.Actors.AddRange(new List<Actor>()
+            context.SaveChanges();
+        }
+        //Actors
+        if (!context.Actors.Any())
+        {
+            context.Actors.AddRange(new List<Actor>()
                     {
                         new Actor()
                         {
@@ -83,12 +83,12 @@ namespace ecom.Data
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-5.jpeg"
                         }
                     });
-                context.SaveChanges();
-            }
-            //Producers
-            if (!context.Producers.Any())
-            {
-                context.Producers.AddRange(new List<Producer>()
+            context.SaveChanges();
+        }
+        //Producers
+        if (!context.Producers.Any())
+        {
+            context.Producers.AddRange(new List<Producer>()
                     {
                         new Producer()
                         {
@@ -122,12 +122,12 @@ namespace ecom.Data
                             ProfilePictureURL = "http://dotnethow.net/images/producers/producer-5.jpeg"
                         }
                     });
-                context.SaveChanges();
-            }
-            //Movies
-            if (!context.Movies.Any())
-            {
-                context.Movies.AddRange(new List<Movie>()
+            context.SaveChanges();
+        }
+        //Movies
+        if (!context.Movies.Any())
+        {
+            context.Movies.AddRange(new List<Movie>()
                     {
                         new Movie()
                         {
@@ -202,12 +202,12 @@ namespace ecom.Data
                             MovieCategory = MovieCategory.Drama
                         }
                     });
-                context.SaveChanges();
-            }
-            //Actors & Movies
-            if (!context.Actors_Movies.Any())
-            {
-                context.Actors_Movies.AddRange(new List<Actor_Movie>()
+            context.SaveChanges();
+        }
+        //Actors & Movies
+        if (!context.Actors_Movies.Any())
+        {
+            context.Actors_Movies.AddRange(new List<Actor_Movie>()
                     {
                         new Actor_Movie()
                         {
@@ -303,11 +303,7 @@ namespace ecom.Data
                             MovieId = 6
                         },
                     });
-                context.SaveChanges();
-            }
+            context.SaveChanges();
         }
-
-
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ecom.Data.Enum;
+using ecom.Data.Enums;
 
 namespace ecom.Models;
 

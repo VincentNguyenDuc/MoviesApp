@@ -20,6 +20,8 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 - [LINQ](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - [MSSQL Server](https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16)
 - [SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli)
+- [Swagger](https://swagger.io/)
+- [xUnit](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
 
 
 ## Setup
