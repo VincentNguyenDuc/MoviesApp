@@ -13,7 +13,7 @@ public class CinemasController : Controller
     public async Task<ActionResult> Index()
     {
         var allCinemas = await _context.Cinemas.ToListAsync();
-        return View();
+        return View(allCinemas);
     }
 
 }

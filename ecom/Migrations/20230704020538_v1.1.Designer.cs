@@ -11,8 +11,8 @@ using ecom.Data;
 namespace ecom.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230703071132_FirstMigrate")]
-    partial class FirstMigrate
+    [Migration("20230704020538_v1.1")]
+    partial class v11
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
