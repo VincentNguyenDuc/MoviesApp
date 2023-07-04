@@ -5,7 +5,7 @@ namespace ecom.Data.Services.Actors;
 
 public class ActorsService : IActorsService
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContext _context; 
 
     public ActorsService(AppDbContext context)
     {
@@ -17,9 +17,11 @@ public class ActorsService : IActorsService
         await _context.SaveChangesAsync();
     }
 
-    public void Delete(int id)
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var actor = await _context.Actors.FirstOrDefaultAsync(n => n.Id == id);
+        _context.Actors.Remove(actor);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<IEnumerable<Actor>> GetAllAsync()
@@ -40,5 +42,4 @@ public class ActorsService : IActorsService
         await _context.SaveChangesAsync();
         return newActor;
     }
-
 }

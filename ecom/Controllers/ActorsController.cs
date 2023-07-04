@@ -39,18 +39,18 @@ public class ActorsController : Controller
     public async Task<IActionResult> Details(int id) {
         var actorDetails = await _service.GetByIdAsync(id);
         if (actorDetails == null) {
-            return View("Not Found");
+            return View("NotFound");
         }
         return View(actorDetails);
     }
 
-    // Update: Actors/Edit
+    // Update: Actors/Edit/{Id}
     public async Task<IActionResult> Edit(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
         if (actorDetails == null)
         {
-            return View("Not Found");
+            return View("NotFound");
         }
         return View(actorDetails);
     }
@@ -63,6 +63,29 @@ public class ActorsController : Controller
             return View(actor);
         }
         await _service.UpdateAsync(id, actor);
+        return RedirectToAction(nameof(Index));
+    }
+
+    // Delete: Actors/Delete/{Id}
+    public async Task<IActionResult> Delete(int id)
+    {
+        var actorDetails = await _service.GetByIdAsync(id);
+        if (actorDetails == null)
+        {
+            return View("NotFound");
+        }
+        return View(actorDetails);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var actorDetails = await _service.GetByIdAsync(id);
+        if (actorDetails == null)
+        {
+            return View("NotFound");
+        }
+        await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
 }
