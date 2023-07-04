@@ -28,9 +28,7 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 
 
 ## Endpoints
-- `/producers` - List all Producers
-- `/actors` - List all Actors
-- `/movies` - List all Movies
+- The Web Application can be access through: `http://localhost:5045/movies`
 
 
 ## To-Dos

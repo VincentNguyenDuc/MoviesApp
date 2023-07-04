@@ -13,8 +13,6 @@ public class Movie
     public string? Name { get; set;}
     [MaxLength(1000)]
     public string? Description { get; set;}
-
-    [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
     public double Price { get; set;}    
     public string? ImageURL { get; set;}
     public DateTime StartDate { get; set;}
