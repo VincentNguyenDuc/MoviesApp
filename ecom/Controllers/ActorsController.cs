@@ -14,10 +14,11 @@ public class ActorsController : Controller
     }
     public async Task<IActionResult> Index()
     {
-        var data = await _service.GetAll();
+        var data = await _service.GetAllAsync();
         return View(data);
     }
 
+    // Create: Actors/Create
     public IActionResult Create()
     {
         return View();
@@ -30,7 +31,38 @@ public class ActorsController : Controller
         {
             return View(actor);
         }
-        _service.Add(actor);
+        await _service.AddAsync(actor);
+        return RedirectToAction(nameof(Index));
+    }
+
+    // Read: Actors/Details/{id}
+    public async Task<IActionResult> Details(int id) {
+        var actorDetails = await _service.GetByIdAsync(id);
+        if (actorDetails == null) {
+            return View("Not Found");
+        }
+        return View(actorDetails);
+    }
+
+    // Update: Actors/Edit
+    public async Task<IActionResult> Edit(int id)
+    {
+        var actorDetails = await _service.GetByIdAsync(id);
+        if (actorDetails == null)
+        {
+            return View("Not Found");
+        }
+        return View(actorDetails);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,ProfilePictureURL,Bio")] Actor actor)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(actor);
+        }
+        await _service.UpdateAsync(id, actor);
         return RedirectToAction(nameof(Index));
     }
 }
