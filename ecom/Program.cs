@@ -1,4 +1,6 @@
 using ecom.Data;
+using ecom.Data.Services;
+using ecom.Data.Services.Actors;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,11 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IActorsService, ActorsService>();
+
 // Database configuration
 builder.Services.AddDbContext<AppDbContext>(options => options
         .UseSqlite(builder
         .Configuration
         .GetConnectionString("SQLiteContext")));
+
 
 var app = builder.Build();
 
