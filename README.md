@@ -6,6 +6,7 @@ An end-to-end E-commerce Web Application
   - [Table of Contents](#table-of-contents)
   - [General Information](#general-information)
   - [Technologies, Frameworks, and Tools](#technologies-frameworks-and-tools)
+  - [Endpoints](#endpoints)
   - [To-Dos](#to-dos)
   - [Acknowledgements](#acknowledgements)
 
@@ -24,6 +25,12 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 - [xUnit](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
 - [Windows Subsystem for Linux (Ubuntu 20.04.6)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
 - [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
+
+
+## Endpoints
+- `/producers` - List all Producers
+- `/actors` - List all Actors
+- `/movies` - List all Movies
 
 
 ## To-Dos
