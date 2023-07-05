@@ -16,11 +16,15 @@ builder.Services.AddScoped<ICinemasService, CinemasService>();
 builder.Services.AddScoped<IProducersService, ProducersService>();
 
 // Database configuration
-builder.Services.AddDbContext<AppDbContext>(options => options
-        .UseSqlite(builder
-        .Configuration
-        .GetConnectionString("SQLiteContext")));
+// builder.Services.AddDbContext<AppDbContext>(options => options
+//         .UseSqlite(builder
+//         .Configuration
+//         .GetConnectionString("SqliteConnectionString")));
 
+builder.Services.AddDbContext<AppDbContext>(options => options
+        .UseSqlServer(builder
+        .Configuration
+        .GetConnectionString("SqlServerConnectionString")));
 
 var app = builder.Build();
 
