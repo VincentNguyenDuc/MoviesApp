@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ecom.Services.Base;
 
 namespace ecom.Models;
 
-public class Cinema
+public class Cinema : IEntityBaseModel
 {
     [Key]
-    public int Id {get; set;}
+    public int Id { get; set; }
 
     [Display(Name = "Cinema Logo")]
     [Required(ErrorMessage = "Logo is required")]

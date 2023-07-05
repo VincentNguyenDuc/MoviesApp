@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ecom.Services.Base;
 
 namespace ecom.Models;
 
-public class Producer
+public class Producer : IEntityBaseModel
 {
     [Key]
     public int Id { get; set; }

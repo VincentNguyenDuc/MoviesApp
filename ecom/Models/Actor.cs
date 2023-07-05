@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
+using ecom.Services.Base;
 
 namespace ecom.Models;
 
-public class Actor
+public class Actor:IEntityBaseModel
 {
     [Key]
     public int Id { get; set; }

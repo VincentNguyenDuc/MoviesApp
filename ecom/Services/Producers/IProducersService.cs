@@ -1,12 +1,8 @@
 ﻿using ecom.Models;
+using ecom.Services.Base;
 
 namespace ecom.Services.Producers;
 
-public interface IProducersService
+public interface IProducersService : IEntityBaseService<Producer>
 {
-    Task<IEnumerable<Producer>> GetAllAsync();
-    Task<Producer> GetByIdAsync(int id);
-    Task AddAsync(Producer producer);
-    Task<Producer> UpdateAsync(int id, Producer newProducer);
-    Task DeleteAsync(int id);
 }
