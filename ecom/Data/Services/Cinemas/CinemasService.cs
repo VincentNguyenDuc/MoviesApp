@@ -5,28 +5,37 @@ namespace ecom.Data.Services.Cinemas;
 
 public class CinemasService : ICinemasService
 {
-    public void Add(Cinema cinema)
+    private readonly AppDbContext _context;
+    public CinemasService(AppDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
     }
-
-    public void Delete(int id)
+    public async Task<IEnumerable<Cinema>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var result = await _context.Cinemas.ToListAsync();
+        return result;
     }
-
-    public Task<IEnumerable<Cinema>> GetAll()
+    public async Task<Cinema> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var result = await _context.Cinemas.FirstOrDefaultAsync(x => x.Id == id);
+        return result;
     }
-
-    public Cinema GetById(int id)
+    public async Task AddAsync(Cinema cinema)
     {
-        throw new NotImplementedException();
+        await _context.Cinemas.AddAsync(cinema);
+        await _context.SaveChangesAsync();
     }
-
-    public Cinema Update(int id, Cinema newCinema)
+    public async Task<Cinema> UpdateAsync(int id, Cinema newCinema)
     {
-        throw new NotImplementedException();
+        _context.Cinemas.Update(newCinema);
+        await _context.SaveChangesAsync();
+        return newCinema;
+
+    }
+    public async Task DeleteAsync(int id)
+    {
+        var cinema = await _context.Cinemas.FirstOrDefaultAsync(n => n.Id == id);
+        _context.Cinemas.Remove(cinema);
+        await _context.SaveChangesAsync();
     }
 }

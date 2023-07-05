@@ -1,6 +1,7 @@
 using ecom.Data;
 using ecom.Data.Services;
 using ecom.Data.Services.Actors;
+using ecom.Data.Services.Cinemas;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IActorsService, ActorsService>();
+builder.Services.AddScoped<ICinemasService, CinemasService>();
 
 // Database configuration
 builder.Services.AddDbContext<AppDbContext>(options => options

@@ -1,4 +1,4 @@
-﻿using ecom.Data.Services;
+﻿using ecom.Data.Services.Actors;
 using ecom.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,7 +44,7 @@ public class ActorsController : Controller
         return View(actorDetails);
     }
 
-    // Update: Actors/Edit/{Id}
+    // Update: Actors/Edit/{id}
     public async Task<IActionResult> Edit(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
@@ -66,7 +66,7 @@ public class ActorsController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    // Delete: Actors/Delete/{Id}
+    // Delete: Actors/Delete/{id}
     public async Task<IActionResult> Delete(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);

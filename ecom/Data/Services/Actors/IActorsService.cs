@@ -1,6 +1,6 @@
 ﻿using ecom.Models;
 
-namespace ecom.Data.Services;
+namespace ecom.Data.Services.Actors;
 
 public interface IActorsService
 {

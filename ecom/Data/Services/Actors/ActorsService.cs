@@ -38,7 +38,7 @@ public class ActorsService : IActorsService
 
     public async Task<Actor> UpdateAsync(int id, Actor newActor)
     {
-        _context.Update(newActor);
+        _context.Actors.Update(newActor);
         await _context.SaveChangesAsync();
         return newActor;
     }
