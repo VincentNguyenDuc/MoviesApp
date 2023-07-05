@@ -21,8 +21,6 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 - [LINQ](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - [MS SQL Server](https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16)
 - [SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli)
-- [Swagger](https://swagger.io/)
-- [xUnit](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
 - [Windows Subsystem for Linux (Ubuntu 20.04.6)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
 - [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
 
@@ -36,10 +34,10 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 - [x] Views
 - [x] Controllers
 - [x] SQLite Migration
-- [ ] CRUD Operations
-- [ ] Services
+- [x] CRUD Operations
+- [x] Services
 - [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
-- [ ] Migrate to MS SQL Server
+- [x] Migrate to MS SQL Server
 - [ ] Authentication/Authorization
 - [ ] Online Payments
 
