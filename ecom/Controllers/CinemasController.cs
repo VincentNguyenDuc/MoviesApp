@@ -1,6 +1,6 @@
 ﻿using ecom.Data;
 using ecom.Models;
-using ecom.Data.Services.Cinemas;
+using ecom.Services.Cinemas;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -86,7 +86,7 @@ public class CinemasController : Controller
         var cinemaDetails = await _service.GetByIdAsync(id);
         if (cinemaDetails == null)
         {
-            return View("Notfound");
+            return View("NotFound");
         }
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));

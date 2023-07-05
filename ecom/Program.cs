@@ -1,7 +1,9 @@
 using ecom.Data;
-using ecom.Data.Services;
-using ecom.Data.Services.Actors;
-using ecom.Data.Services.Cinemas;
+using ecom.Services.Actors;
+using ecom.Services.Cinemas;
+using ecom.Services.Producers;
+
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddScoped<ICinemasService, CinemasService>();
+builder.Services.AddScoped<IProducersService, ProducersService>();
 
 // Database configuration
 builder.Services.AddDbContext<AppDbContext>(options => options
@@ -40,6 +43,6 @@ app.CreateDbIfNotExists();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Movies}/{action=Index}/{id?}");
 
 app.Run();

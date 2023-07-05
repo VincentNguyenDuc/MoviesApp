@@ -1,4 +1,4 @@
-﻿using ecom.Data.Services.Actors;
+﻿using ecom.Services.Actors;
 using ecom.Models;
 using Microsoft.AspNetCore.Mvc;
 

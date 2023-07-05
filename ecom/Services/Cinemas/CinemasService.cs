@@ -1,7 +1,8 @@
 using ecom.Models;
 using Microsoft.EntityFrameworkCore;
+using ecom.Data;
 
-namespace ecom.Data.Services.Cinemas;
+namespace ecom.Services.Cinemas;
 
 public class CinemasService : ICinemasService
 {

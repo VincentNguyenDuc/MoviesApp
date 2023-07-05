@@ -1,6 +1,6 @@
 using ecom.Models;
 
-namespace ecom.Data.Services.Cinemas;
+namespace ecom.Services.Cinemas;
 
 public interface ICinemasService
 {

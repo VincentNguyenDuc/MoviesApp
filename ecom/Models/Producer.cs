@@ -8,16 +8,17 @@ public class Producer
     public int Id { get; set; }
 
     [Display(Name = "Profile Picture")]
+    [Required(ErrorMessage = "Profile Picture is required")]
     public string? ProfilePictureURL { get; set; }
 
     [Display(Name = "Full Name")]
-    [Required]
+    [Required(ErrorMessage = "Full Name is required")]
+    [StringLength(50, MinimumLength = 3, ErrorMessage = "Full Name must be between 3 and 50 characters")]
     public string? FullName { get; set; }
-    
-    [MaxLength(1000)]
-    [Display(Name = "Biography")]
-    public string? Bio { get; set; }
 
-    // Relationships
+    [Display(Name = "Biography")]
+    [Required(ErrorMessage = "Biography is required")]
+    [StringLength(1000, MinimumLength = 10, ErrorMessage = "String length must be between 10 and 1000 characters")]
+    public string? Bio { get; set; }
     public List<Movie>? Movies { get; set; }
 }
