@@ -6,7 +6,12 @@ An end-to-end E-commerce Web Application
   - [Table of Contents](#table-of-contents)
   - [General Information](#general-information)
   - [Technologies, Frameworks, and Tools](#technologies-frameworks-and-tools)
+  - [Setup](#setup)
   - [Endpoints](#endpoints)
+    - [Movies](#movies)
+    - [Actors](#actors)
+    - [Producers](#producers)
+    - [Cinemas](#cinemas)
   - [To-Dos](#to-dos)
   - [Acknowledgements](#acknowledgements)
 
@@ -24,9 +29,44 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 - [Windows Subsystem for Linux (Ubuntu 20.04.6)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
 - [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
 
+## Setup
+
+- Here is a [Quick Introduction](https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/) to Wep Application with .NET CORE
+  - Install [.NET CORE](https://dotnet.microsoft.com/en-us/download)
+  - Install [Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022) OR [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
+  - Install [MS SQL Server](https://learn.microsoft.com/vi-vn/ef/core/providers/sql-server/?tabs=dotnet-core-cli) AND [SQLITE](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli) for quick testing
+- Setting up:
+  - 
 
 ## Endpoints
-- The Web Application can be access through: `http://localhost:5045/movies`
+- The landing page can be access through: `http://localhost:5045/`
+
+### Movies
+  - `/Movies` - List all movies
+  - `/Movies/Details/{Id}` - See all information of a movie
+  - `/Movies/Edit/{Id}` - Modify the detail of a movie
+  - `/Movies/Create` - Add a new movie to the database
+
+### Actors
+  - `/Actors` - List all actors
+  - `/Actors/Details/{Id}` - See all information of an actor
+  - `/Actors/Edit/{Id}` - Modify the detail of an actor
+  - `/Actors/Delete/{Id}` - Delete an actor from the database
+  - `/Actors/Create` - Add a new actor to the database
+
+### Producers
+  - `/Producers` - List all producers
+  - `/Producers/Details/{Id}` - See all information of an actor
+  - `/Producers/Edit/{Id}` - Modify the detail of a producer
+  - `/Producers/Delete/{Id}` - Delete a producer from the database
+  - `/Producers/Create` - Add a new producer to the database
+
+### Cinemas
+  - `/Cinemas` - List all cinema
+  - `/Cinemas/Details/{Id}` - See all information of a cinema
+  - `/Cinemas/Edit/{Id}` - Modify the detail of a cinema
+  - `/Cinemas/Delete/{Id}` - Delete a cinema from the database
+  - `/Cinemas/Create` - Add a new cinema to the database
 
 
 ## To-Dos
@@ -36,8 +76,8 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 - [x] SQLite Migration
 - [x] CRUD Operations
 - [x] Services
-- [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
 - [x] Migrate to MS SQL Server
+- [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
 - [ ] Authentication/Authorization
 
 
