@@ -12,7 +12,7 @@ An end-to-end E-commerce Web Application
 
 
 ## General Information
-A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-7.0&tabs=windows) and its related frameworks.
+A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-7.0&tabs=windows) and its related frameworks.
 
 
 ## Technologies, Frameworks, and Tools
@@ -39,7 +39,6 @@ A simple e-commerce movie tickets MVC Web Application using [ASP.NET Core](https
 - [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
 - [x] Migrate to MS SQL Server
 - [ ] Authentication/Authorization
-- [ ] Online Payments
 
 
 ## Acknowledgements
