@@ -1,6 +1,7 @@
 using ecom.Data;
 using ecom.Services.Actors;
 using ecom.Services.Cinemas;
+using ecom.Services.Movies;
 using ecom.Services.Producers;
 
 
@@ -14,6 +15,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddScoped<ICinemasService, CinemasService>();
 builder.Services.AddScoped<IProducersService, ProducersService>();
+builder.Services.AddScoped<IMoviesService, MoviesService>();
 
 // Database configuration
 // builder.Services.AddDbContext<AppDbContext>(options => options
