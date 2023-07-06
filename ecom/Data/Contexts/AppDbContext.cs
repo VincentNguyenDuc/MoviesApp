@@ -1,5 +1,4 @@
 using ecom.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace ecom.Data;
 

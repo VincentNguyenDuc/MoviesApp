@@ -20,7 +20,6 @@ public class MoviesService : EntityBaseService<Movie>, IMoviesService
         {
             Name = data.Name,
             Description = data.Description,
-            Price = data.Price,
             ImageURL = data.ImageURL,
             CinemaId = data.CinemaId,
             StartDate = data.StartDate,
@@ -74,7 +73,6 @@ public class MoviesService : EntityBaseService<Movie>, IMoviesService
         {
             dbMovie.Name = data.Name;
             dbMovie.Description = data.Description;
-            dbMovie.Price = data.Price;
             dbMovie.ImageURL = data.ImageURL;
             dbMovie.CinemaId = data.CinemaId;
             dbMovie.StartDate = data.StartDate;

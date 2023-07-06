@@ -13,7 +13,7 @@
             <div class="col-md-8 offset-2">
 
                 <div class="form-group text-center">
-                    <img id="ProfilePicturePreview" class="border-info rounded-circle" style="max-width: 150px" />
+                    <img id="LogoPreview" class="border-info rounded-circle" style="max-width: 150px" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Logo" class="control-label"></label>
@@ -42,7 +42,6 @@
 
 @section Scripts {
     <script>
-
         $(document).ready(function () {
             var output = document.getElementById('LogoPreview');
             output.src = $("#Logo").val();

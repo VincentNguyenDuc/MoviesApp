@@ -78,7 +78,6 @@ public class MoviesController : Controller
             Id = movieDetails.Id,
             Name = movieDetails.Name,
             Description = movieDetails.Description,
-            Price = movieDetails.Price,
             StartDate = movieDetails.StartDate,
             EndDate = movieDetails.EndDate,
             ImageURL = movieDetails.ImageURL,
