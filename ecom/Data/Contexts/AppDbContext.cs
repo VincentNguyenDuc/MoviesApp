@@ -1,4 +1,5 @@
 using ecom.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ecom.Data;
 
@@ -12,21 +13,21 @@ public class AppDbContext : DbContext
     {
 
         modelBuilder.Entity<Actor_Movie>()
-            .HasKey(actorMovie => new
+            .HasKey(am => new
             {
-                actorMovie.ActorId,
-                actorMovie.MovieId
+                am.ActorId,
+                am.MovieId
             });
 
         modelBuilder.Entity<Actor_Movie>()
-            .HasOne(movie => movie.Movie)
-            .WithMany(actorMovie => actorMovie.Actors_Movies)
-            .HasForeignKey(movie => movie.MovieId);
+            .HasOne(m => m.Movie) 
+            .WithMany(am => am.Actors_Movies)
+            .HasForeignKey(m => m.MovieId);
 
         modelBuilder.Entity<Actor_Movie>()
-            .HasOne(actor => actor.Actor)
-            .WithMany(actorMovie => actorMovie.Actors_Movies)
-            .HasForeignKey(actor => actor.ActorId);
+            .HasOne(m => m.Actor)
+            .WithMany(am => am.Actors_Movies)
+            .HasForeignKey(m => m.ActorId);
 
 
         base.OnModelCreating(modelBuilder);

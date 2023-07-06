@@ -16,10 +16,6 @@ public class NewMovieViewModel
     [Required(ErrorMessage = "Description is required")]
     public string? Description { get; set; }
 
-    [Display(Name="Price in $")]
-    [Required(ErrorMessage = "Price is required")]
-    public double Price { get; set; }
-
     [Display(Name = "Movie poster URL")]
     [Required(ErrorMessage = "Movie poster URL is required")]
     public string? ImageURL { get; set; }

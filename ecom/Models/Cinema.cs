@@ -21,5 +21,7 @@ public class Cinema : IEntityBaseModel
     [Required(ErrorMessage = "Description is required")]
     [StringLength(1000, MinimumLength = 10, ErrorMessage = "Description must be between 10 and 1000 characters")]
     public string? Description { get; set; }
-    public List<Movie>? Movies { get; set; }
+
+    // Relationships
+    public virtual List<Movie> Movies { get; set; }
 }
