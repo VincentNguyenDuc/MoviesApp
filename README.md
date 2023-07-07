@@ -80,8 +80,6 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 - [x] Services
 - [x] Migrate to MS SQL Server
 - [x] Authentication/Authorization
-- [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
-
 
 
 ## Acknowledgements
