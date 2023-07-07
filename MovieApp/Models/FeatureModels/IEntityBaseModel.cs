@@ -1,4 +1,4 @@
-namespace MovieApp.Services.Base;
+namespace MovieApp.Models.FeatureModels;
 
 public interface IEntityBaseModel
 {

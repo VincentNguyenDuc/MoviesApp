@@ -1,4 +1,4 @@
-using MovieApp.Models;
+using MovieApp.Models.FeatureModels;
 using MovieApp.Data;
 using MovieApp.Services.Base;
 

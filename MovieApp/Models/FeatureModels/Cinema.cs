@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using MovieApp.Services.Base;
 
-namespace MovieApp.Models;
+namespace MovieApp.Models.FeatureModels;
 
 public class Cinema : IEntityBaseModel
 {

@@ -1,5 +1,5 @@
 ﻿using MovieApp.Services.Actors;
-using MovieApp.Models;
+using MovieApp.Models.FeatureModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MovieApp.Controllers;

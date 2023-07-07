@@ -1,5 +1,5 @@
 using MovieApp.Data.Enums;
-using MovieApp.Models;
+using MovieApp.Models.FeatureModels;
 
 namespace MovieApp.Data;
 

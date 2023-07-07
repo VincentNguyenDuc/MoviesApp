@@ -1,4 +1,4 @@
-﻿using MovieApp.Models;
+﻿using MovieApp.Models.FeatureModels;
 using MovieApp.Services.Producers;
 using Microsoft.AspNetCore.Mvc;
 

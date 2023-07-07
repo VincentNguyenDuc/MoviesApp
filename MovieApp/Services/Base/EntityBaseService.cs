@@ -2,6 +2,7 @@ using System.Linq.Expressions;
 using MovieApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using MovieApp.Models.FeatureModels;
 
 namespace MovieApp.Services.Base;
 

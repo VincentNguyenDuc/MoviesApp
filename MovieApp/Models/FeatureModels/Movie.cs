@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using MovieApp.Data.Enums;
-using MovieApp.Services.Base;
 
-namespace MovieApp.Models;
+namespace MovieApp.Models.FeatureModels;
 
 public class Movie : IEntityBaseModel
 {

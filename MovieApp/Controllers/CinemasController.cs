@@ -1,9 +1,6 @@
-﻿using MovieApp.Data;
-using MovieApp.Models;
+﻿using MovieApp.Models.FeatureModels;
 using MovieApp.Services.Cinemas;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MovieApp.Controllers;
 

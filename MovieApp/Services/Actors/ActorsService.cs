@@ -1,5 +1,5 @@
 ﻿using MovieApp.Services.Base;
-using MovieApp.Models;
+using MovieApp.Models.FeatureModels;
 using MovieApp.Data;
 
 namespace MovieApp.Services.Actors;

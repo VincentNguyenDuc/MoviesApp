@@ -1,4 +1,6 @@
-﻿namespace MovieApp.Models.ViewModels;
+﻿using MovieApp.Models.FeatureModels;
+
+namespace MovieApp.Models.ViewModels;
 
 public class NewMovieDropDownViewModel
 {

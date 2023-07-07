@@ -1,13 +1,12 @@
-using System.ComponentModel.DataAnnotations;
-using MovieApp.Services.Base;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace MovieApp.Models;
+namespace MovieApp.Models.FeatureModels;
 
-public class Actor:IEntityBaseModel
+public class Producer : IEntityBaseModel
 {
     [Key]
     public int Id { get; set; }
-    
+
     [Display(Name = "Profile Picture")]
     [Required(ErrorMessage = "Profile Picture is required")]
     public string? ProfilePictureURL { get; set; }
@@ -23,5 +22,5 @@ public class Actor:IEntityBaseModel
     public string? Bio { get; set; }
 
     // Relationships
-    public virtual List<Actor_Movie>? Actors_Movies { get; set; }
+    public virtual List<Movie> Movies { get; set; }
 }

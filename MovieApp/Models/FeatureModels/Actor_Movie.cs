@@ -1,4 +1,4 @@
-namespace MovieApp.Models;
+namespace MovieApp.Models.FeatureModels;
 public class Actor_Movie
 {
     public int MovieId { get; set; }

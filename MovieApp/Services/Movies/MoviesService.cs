@@ -1,5 +1,5 @@
 ﻿using MovieApp.Data;
-using MovieApp.Models;
+using MovieApp.Models.FeatureModels;
 using MovieApp.Models.ViewModels;
 using MovieApp.Services.Base;
 using Microsoft.EntityFrameworkCore;
