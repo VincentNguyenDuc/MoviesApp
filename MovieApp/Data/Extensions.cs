@@ -10,6 +10,7 @@ public static class Extensions
             var context = services.GetRequiredService<AppDbContext>();
             context.Database.EnsureCreated();
             AppDbInitializer.Initialize(context);
+            AppDbInitializer.InitializeUsersAndRolesAsync((IApplicationBuilder)host).Wait();
         }
     }
 }

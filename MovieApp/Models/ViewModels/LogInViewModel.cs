@@ -1,0 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MovieApp.Models.ViewModels;
+
+public class LogInViewModel
+{
+    [Display(Name ="Emily address")]
+    [Required(ErrorMessage = "Email address is required")]
+    public string EmailAddress { get; set; }
+
+    [Required]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+}
