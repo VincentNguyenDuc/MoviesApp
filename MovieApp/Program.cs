@@ -16,17 +16,13 @@ builder.Services.AddScoped<ICinemasService, CinemasService>();
 builder.Services.AddScoped<IProducersService, ProducersService>();
 builder.Services.AddScoped<IMoviesService, MoviesService>();
 
-// Database configuration
-// builder.Services.AddDbContext<AppDbContext>(options => options
-//         .UseSqlite(builder
-//         .Configuration
-//         .GetConnectionString("SqliteConnectionString")));
-
+// Add Database context
 builder.Services.AddDbContext<AppDbContext>(options => options
         .UseSqlServer(builder
         .Configuration
         .GetConnectionString("SqlServerConnectionString")));
 
+// Add Authorization and Authentication
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();

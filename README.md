@@ -25,16 +25,16 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 - [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/)
 - [LINQ](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - [MS SQL Server](https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16)
-- [SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli)
 - [Windows Subsystem for Linux (Ubuntu 20.04.6)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
 - [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
+- [RestSharp](https://restsharp.dev/intro.html#introduction)
 
 ## Setup
 
 - Here is a [Quick Introduction](https://learn.microsoft.com/en-us/training/modules/build-web-api-aspnet-core/) to Wep Application with .NET CORE
   - Install [.NET CORE](https://dotnet.microsoft.com/en-us/download)
   - Install [Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022) OR [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
-  - Install [MS SQL Server](https://learn.microsoft.com/vi-vn/ef/core/providers/sql-server/?tabs=dotnet-core-cli) AND [SQLITE](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli) for quick testing
+  - Install [MS SQL Server](https://learn.microsoft.com/vi-vn/ef/core/providers/sql-server/?tabs=dotnet-core-cli)
 
 
 ## Endpoints
