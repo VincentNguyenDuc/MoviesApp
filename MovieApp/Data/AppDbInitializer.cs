@@ -320,7 +320,6 @@ public class AppDbInitializer
         string adminUserEmail = "admin@gmail.com";
 
         var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
-        Console.WriteLine(adminUser.Email);
         if (adminUser == null)
         {
             var newAdminUser = new ApplicationUser()
