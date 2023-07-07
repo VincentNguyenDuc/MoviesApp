@@ -317,9 +317,10 @@ public class AppDbInitializer
 
         //Users
         var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-        string adminUserEmail = "admin@etickets.com";
+        string adminUserEmail = "admin@gmail.com";
 
         var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+        Console.WriteLine(adminUser.Email);
         if (adminUser == null)
         {
             var newAdminUser = new ApplicationUser()
@@ -334,7 +335,7 @@ public class AppDbInitializer
         }
 
 
-        string appUserEmail = "user@etickets.com";
+        string appUserEmail = "user@gmail.com";
 
         var appUser = await userManager.FindByEmailAsync(appUserEmail);
         if (appUser == null)

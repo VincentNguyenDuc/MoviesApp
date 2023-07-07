@@ -92,7 +92,7 @@ public class AccountsController : Controller
 
     public IActionResult AccessDenied(string ReturnUrl)
     {
-        return View();
+        return View(ReturnUrl);
     }
 
 }

@@ -1,9 +1,12 @@
 ﻿using MovieApp.Models.FeatureModels;
 using MovieApp.Services.Cinemas;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using MovieApp.Data.Statics;
 
 namespace MovieApp.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class CinemasController : Controller
 {
     public readonly ICinemasService _service;
@@ -11,6 +14,8 @@ public class CinemasController : Controller
     {
         _service = service;
     }
+
+    [AllowAnonymous]
     public async Task<ActionResult> Index()
     {
         var allCinemas = await _service.GetAllAsync();
@@ -35,6 +40,7 @@ public class CinemasController : Controller
     }
 
     // Read: Cinemas/Details/{id}
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int id)
     {
         var cinemaDetails = await _service.GetByIdAsync(id);

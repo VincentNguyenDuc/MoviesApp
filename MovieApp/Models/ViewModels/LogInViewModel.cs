@@ -4,7 +4,7 @@ namespace MovieApp.Models.ViewModels;
 
 public class LogInViewModel
 {
-    [Display(Name ="Emily address")]
+    [Display(Name ="Email address")]
     [Required(ErrorMessage = "Email address is required")]
     public string EmailAddress { get; set; }
 

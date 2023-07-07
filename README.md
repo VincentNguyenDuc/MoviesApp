@@ -40,6 +40,9 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 
 ## Endpoints
 - The landing page can be access through: `http://localhost:5045/`
+- Admin Account: 
+  - Gmail: `admin@gmail.com`
+  - Password: `Coding@1234?`
 
 ### Movies
   - `/Movies` - List all movies

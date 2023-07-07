@@ -1,9 +1,12 @@
 ﻿using MovieApp.Services.Actors;
 using MovieApp.Models.FeatureModels;
+using MovieApp.Data.Statics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MovieApp.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class ActorsController : Controller
 {
     private readonly IActorsService _service;
@@ -12,6 +15,8 @@ public class ActorsController : Controller
     {
         _service = service;
     }
+
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
@@ -35,6 +40,7 @@ public class ActorsController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [AllowAnonymous]
     // Read: Actors/Details/{id}
     public async Task<IActionResult> Details(int id) {
         var actorDetails = await _service.GetByIdAsync(id);

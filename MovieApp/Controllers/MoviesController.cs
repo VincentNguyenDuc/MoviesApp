@@ -2,9 +2,12 @@
 using MovieApp.Services.Movies;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MovieApp.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using MovieApp.Data.Statics;
 
 namespace MovieApp.Controllers;
 
+[Authorize(Roles = UserRoles.Admin)]
 public class MoviesController : Controller
 {
     public readonly IMoviesService _service;
@@ -12,12 +15,15 @@ public class MoviesController : Controller
     {
         _service = service;
     }
+
+    [AllowAnonymous]
     public async Task<IActionResult> Index()
     {
         var allMovies = await _service.GetAllAsync(n => n.Cinema);
         return View(allMovies);
     }
 
+    [AllowAnonymous]
     public async Task<IActionResult> Filter(string searchString)
     {
         var allMovies = await _service.GetAllAsync(n => n.Cinema);
@@ -32,6 +38,7 @@ public class MoviesController : Controller
         return View("Index", allMovies);
     }
 
+    [AllowAnonymous]
     public async Task<IActionResult> Details(int id) {
         var movieDetail = await _service.GetMovieByIdAsync(id);
         return View(movieDetail);
