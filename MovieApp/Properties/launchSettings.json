@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Ecom": {
+    "MoviesApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
