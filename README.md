@@ -35,17 +35,16 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
   - Install [.NET CORE](https://dotnet.microsoft.com/en-us/download)
   - Install [Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022) OR [Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
   - Install [MS SQL Server](https://learn.microsoft.com/vi-vn/ef/core/providers/sql-server/?tabs=dotnet-core-cli) AND [SQLITE](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli) for quick testing
-- Setting up:
-  - 
+
 
 ## Endpoints
 - The landing page can be access through: `http://localhost:5045/`
-- Admin Account: 
+- Admin Account (Create, Update, Delete): 
   - Gmail: `admin@gmail.com`
   - Password: `Coding@1234?`
 
 ### Movies
-  - `/Movies` - List all movies
+  - `/Movies` - List all movies 
   - `/Movies/Details/{Id}` - See all information of a movie
   - `/Movies/Edit/{Id}` - Modify the detail of a movie
   - `/Movies/Create` - Add a new movie to the database
@@ -80,8 +79,9 @@ A simple MVC Web Application using [ASP.NET Core](https://learn.microsoft.com/en
 - [x] CRUD Operations
 - [x] Services
 - [x] Migrate to MS SQL Server
+- [x] Authentication/Authorization
 - [ ] Integrate [MoviesDatabase API](https://rapidapi.com/SAdrian/api/moviesdatabase)
-- [ ] Authentication/Authorization
+
 
 
 ## Acknowledgements
